@@ -27,7 +27,7 @@ Advantages and features
  2. Can also convert png to jpg files, if they are non-transparent (meaning not even a single pixel has a non-100%-opaque color)
  3. Should work on all OSs (yet tested on Windows only)
  4. Can handle all supported image files of all folders that are given, or only those on res/drawable* and res/mipmap* (which works this way by default)
- 5. Supports drag&drop of files&folders, or entering full paths to them, separated by ";"
+ 5. Supports drag&drop of files&folders, or entering full paths to them, separated by ";". Will handle all sub-directories, recursively.
  6. Supports level of encoding quality for both Jpeg and WebP
  7. Shows progress and summary of how many files were handled and how much space was saved.
  8. Native look&feel of the OS (because it uses SWT).
@@ -42,4 +42,5 @@ Disadvantages, issues, and To-do's
  4. Since I'm not sure how to make the same project work well on multiple OSs (needed SWT and converter file for each), and since I don't have other OSs currently, it was only developed&tested on Windows OS.
  5. Output files might be a bit too large compared to the amount of code.
  6. Chosen settings aren't saved for next sessions. It also doesn't remember which files were already handled for next sessions
- 7. Doesn't parse the gradle files, and assumes the folders structures of "res/drawable*" and "res/mipmap*" for the image files to handle.
+ 7. Doesn't parse the gradle files. Instea, it assumes the folders structures of "res/drawable*" and "res/mipmap*" for the image files to handle. You can disable this check, and let it convert all supported files in all sub-directories of the given path.
+ 8. A bit slow, but this is in order to compress the files using the best space-saving algorithm. 
