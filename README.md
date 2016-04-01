@@ -5,6 +5,8 @@ Sample video:
 
 [<img src="https://raw.githubusercontent.com/AndroidDeveloperLB/WebpifyYourAndroidApp/master/art/play-1073616_640.png">](https://rawgit.com/AndroidDeveloperLB/WebpifyYourAndroidApp/master/art/player.html)
 
+<img src="https://raw.githubusercontent.com/AndroidDeveloperLB/WebpifyYourAndroidApp/master/art/Webp_logo_Webp.png">
+
 
 How to use
 ----------
