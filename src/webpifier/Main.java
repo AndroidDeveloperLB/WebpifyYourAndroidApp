@@ -338,7 +338,7 @@ public class Main extends Shell {
 		fd_scaleWebpEncoderQuality.bottom = new FormAttachment(100, -94);
 		fd_scaleWebpEncoderQuality.right = new FormAttachment(100, -108);
 		scaleWebpEncoderQuality.setLayoutData(fd_scaleWebpEncoderQuality);
-		scaleWebpEncoderQuality.setSelection(95);
+		scaleWebpEncoderQuality.setSelection(80);
 		lblWebpEncoderQuality.setText("webp encoder quality:" + scaleWebpEncoderQuality.getSelection());
 
 		btnJpgToWebpShouldBecomeLossless = new Button(this, SWT.CHECK);
@@ -364,7 +364,7 @@ public class Main extends Shell {
 		fd_btnHandleOnlyFilesFromResFolder.bottom = new FormAttachment(btnDeleteOriginalFile, 0, SWT.BOTTOM);
 		fd_btnHandleOnlyFilesFromResFolder.left = new FormAttachment(btnPng2WebpShouldStayLossless, 0, SWT.LEFT);
 		btnHandleOnlyFilesFromResFolder.setLayoutData(fd_btnHandleOnlyFilesFromResFolder);
-		btnHandleOnlyFilesFromResFolder.setText("Handle only file from res/drawable and res/mipmap");
+		btnHandleOnlyFilesFromResFolder.setText("Handle only files from res/drawable and res/mipmap");
 
 		lbStatus = new Label(this, SWT.NONE);
 		fd_btnDoIt.bottom = new FormAttachment(lbStatus, -17);
@@ -568,7 +568,7 @@ public class Main extends Shell {
 	}
 
 	protected void createContents() {
-		setText("Webpify your app");
+		setText("Webpify your Android app");
 		setSize(669, 393);
 	}
 
