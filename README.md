@@ -1,6 +1,10 @@
 # WebpifyYourAndroidApp
 A small tool to convert your app's png&amp;jpg image files into WebP when possible
 
+Sample video:
+[<img src="https://raw.githubusercontent.com/AndroidDeveloperLB/WebpifyYourAndroidApp/master/art/play-1073616_640.png">](https://github.com/AndroidDeveloperLB/WebpifyYourAndroidApp/blob/master/art/clip0038.avi)
+
+
 How to use
 ----------
 If you use Windows OS, just run the executable jar file that's inside the repo, inside "Release\WindowsOs". Then, drag the file/s&folder/s into the app, or put the paths of them into the textBox, choose the settings you wish, and press the conversion button ("do it").
