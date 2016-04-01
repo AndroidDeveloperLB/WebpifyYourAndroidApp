@@ -1,3 +1,6 @@
+<img src="https://raw.githubusercontent.com/AndroidDeveloperLB/WebpifyYourAndroidApp/master/art/Webp_logo_Webp.png">
+
+
 # WebpifyYourAndroidApp
 A small tool to convert your app's png&amp;jpg image files into WebP when possible
 
@@ -5,7 +8,6 @@ Sample video:
 
 [<img src="https://raw.githubusercontent.com/AndroidDeveloperLB/WebpifyYourAndroidApp/master/art/play-1073616_640.png">](https://rawgit.com/AndroidDeveloperLB/WebpifyYourAndroidApp/master/art/player.html)
 
-<img src="https://raw.githubusercontent.com/AndroidDeveloperLB/WebpifyYourAndroidApp/master/art/Webp_logo_Webp.png">
 
 
 How to use
