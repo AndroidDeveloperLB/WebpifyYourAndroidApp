@@ -3,7 +3,7 @@ A small tool to convert your app's png&amp;jpg image files into WebP when possib
 
 Sample video:
 
-[<img src="https://raw.githubusercontent.com/AndroidDeveloperLB/WebpifyYourAndroidApp/master/art/play-1073616_640.png">](https://github.com/AndroidDeveloperLB/WebpifyYourAndroidApp/blob/master/art/clip0038.avi?raw=true)
+[<img src="https://raw.githubusercontent.com/AndroidDeveloperLB/WebpifyYourAndroidApp/master/art/play-1073616_640.png">](https://raw.githubusercontent.com/AndroidDeveloperLB/WebpifyYourAndroidApp/master/art/clip0038.webm)
 
 
 How to use
