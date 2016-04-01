@@ -36,6 +36,7 @@ Advantages and features
  6. Supports level of encoding quality for both Jpeg and WebP
  7. Shows progress and summary of how many files were handled and how much space was saved.
  8. Native look&feel of the OS (because it uses SWT).
+ 9. Skips 9-patch images, as they aren't supported in WebP format anyway.
 
 Disadvantages, issues, and To-do's
 -------------
