@@ -51,7 +51,7 @@ Disadvantages, issues, and To-do's
  2. Supports only png&jpg as input image files. Should be possible to handle gif files too
  3. Uses executable converter files instead of JNI. 
  4. Since I'm not sure how to make the same project work well on multiple OSs (needed SWT and converter file for each), and since I don't have other OSs currently, it was only developed&tested on Windows OS.
- 5. Output files might be a bit too large compared to the amount of code.
+ 5. The tool doesn't remember which files were already handled from last time. It will go over all of them each time.
  6. Chosen settings aren't saved for next sessions. It also doesn't remember which files were already handled for next sessions
  7. Doesn't parse the gradle files. Instea, it assumes the folders structures of "res/drawable*" and "res/mipmap*" for the image files to handle. You can disable this check, and let it convert all supported files in all sub-directories of the given path.
  8. A bit slow, but this is in order to compress the files using the best space-saving algorithm. 
