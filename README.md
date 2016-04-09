@@ -47,7 +47,8 @@ Disadvantages, issues, and To-do's
 -------------
 
  1. Ugly UI, but still functional. :)
-   I wanted to make this tool for developers anyway. I'm not as familiar with SWT as I am with Android, and I didn't want to spend too much time on it.
+   
+  I wanted to make this tool for developers anyway. I'm not as familiar with SWT as I am with Android, and I didn't want to spend too much time on it.
  2. Supports only png&jpg as input image files. Should be possible to handle gif files too
  3. Uses executable converter files instead of JNI. 
  4. Since I'm not sure how to make the same project work well on multiple OSs (needed SWT and converter file for each), and since I don't have other OSs currently, it was only developed&tested on Windows OS.
