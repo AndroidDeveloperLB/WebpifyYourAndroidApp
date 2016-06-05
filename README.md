@@ -55,3 +55,7 @@ Disadvantages, issues, and To-do's
  7. Doesn't parse the gradle files. Instea, it assumes the folders structures of "res/drawable*" and "res/mipmap*" for the image files to handle. You can disable this check, and let it convert all supported files in all sub-directories of the given path.
  8. A bit slow, but this is in order to compress the files using the best space-saving algorithm. 
  9. There should be a console/command-line tool, and not just UI-based tool.
+
+I hope that this tool will be useful for all Android developers. I've also tried to suggest having such a tool within the IDE itself:
+
+https://code.google.com/p/android/issues/detail?id=202923
