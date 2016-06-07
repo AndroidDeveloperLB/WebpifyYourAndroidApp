@@ -61,6 +61,7 @@ public class Main extends Shell {
 	private Label lbStatus;
 	private Menu menu;
 	private MenuItem mntmAbout;
+	private Button btnApi18OrAbove;
 
 	/**
 	 * Launch the application.
@@ -215,16 +216,11 @@ public class Main extends Shell {
 		fd_group.top = new FormAttachment(0, 45);
 		fd_group.left = new FormAttachment(0, 65);
 		group.setLayoutData(fd_group);
-
 		btnUpToApi13 = new Button(group, SWT.RADIO);
 		btnUpToApi13.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				btnConvertNonTransparentImagesToWebp.setEnabled(false);
-				btnPng2WebpShouldStayLossless.setEnabled(false);
-				btnConvertTransparentImagesToWebp.setEnabled(false);
-				scaleWebpEncoderQuality.setEnabled(false);
-				btnJpgToWebpShouldBecomeLossless.setEnabled(false);
+				updateButtonsStateAccordingToSelectedMinSdk();
 			}
 		});
 		btnUpToApi13.setBounds(3, 16, 90, 16);
@@ -234,26 +230,18 @@ public class Main extends Shell {
 		btnApi14To17.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				btnConvertNonTransparentImagesToWebp.setEnabled(true);
-				btnPng2WebpShouldStayLossless.setEnabled(true);
-				btnConvertTransparentImagesToWebp.setEnabled(false);
-				scaleWebpEncoderQuality.setEnabled(true);
-				btnJpgToWebpShouldBecomeLossless.setEnabled(true);
+				updateButtonsStateAccordingToSelectedMinSdk();
 			}
 		});
 		btnApi14To17.setBounds(99, 16, 71, 16);
 		btnApi14To17.setText("API 14-17");
 		btnApi14To17.setSelection(true);
 
-		Button btnApi18OrAbove = new Button(group, SWT.RADIO);
+		btnApi18OrAbove = new Button(group, SWT.RADIO);
 		btnApi18OrAbove.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				btnConvertNonTransparentImagesToWebp.setEnabled(true);
-				btnPng2WebpShouldStayLossless.setEnabled(true);
-				btnConvertTransparentImagesToWebp.setEnabled(true);
-				scaleWebpEncoderQuality.setEnabled(true);
-				btnJpgToWebpShouldBecomeLossless.setEnabled(true);
+				updateButtonsStateAccordingToSelectedMinSdk();
 			}
 		});
 		btnApi18OrAbove.setBounds(193, 16, 106, 16);
@@ -419,6 +407,30 @@ public class Main extends Shell {
 				}
 			}
 		});
+		updateButtonsStateAccordingToSelectedMinSdk();
+
+	}
+
+	private void updateButtonsStateAccordingToSelectedMinSdk() {
+		if (btnApi18OrAbove.getSelection()) {
+			btnConvertNonTransparentImagesToWebp.setEnabled(true);
+			btnPng2WebpShouldStayLossless.setEnabled(true);
+			btnConvertTransparentImagesToWebp.setEnabled(true);
+			scaleWebpEncoderQuality.setEnabled(true);
+			btnJpgToWebpShouldBecomeLossless.setEnabled(true);
+		} else if (btnApi14To17.getSelection()) {
+			btnConvertNonTransparentImagesToWebp.setEnabled(true);
+			btnPng2WebpShouldStayLossless.setEnabled(true);
+			btnConvertTransparentImagesToWebp.setEnabled(false);
+			scaleWebpEncoderQuality.setEnabled(true);
+			btnJpgToWebpShouldBecomeLossless.setEnabled(true);
+		} else if (btnUpToApi13.getSelection()) {
+			btnConvertNonTransparentImagesToWebp.setEnabled(false);
+			btnPng2WebpShouldStayLossless.setEnabled(false);
+			btnConvertTransparentImagesToWebp.setEnabled(false);
+			scaleWebpEncoderQuality.setEnabled(false);
+			btnJpgToWebpShouldBecomeLossless.setEnabled(false);
+		}
 	}
 
 	private File getPngAndJpgToWebpConversionFile(String mainPathOfCurrentApp) {
